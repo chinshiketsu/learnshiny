@@ -7,10 +7,15 @@
 
 library(shiny)
 
-shinyUI(fluidPage(
-    h3("URL conponents"),
-    verbatimTextOutput("urlText"),
-    
-    h3("Parsed query string"),
-    verbatimTextOutput("queryText")
+shinyUI(pageWithSidebar(
+    headerPanel("Shiny Client Data"),
+    sidebarPanel(
+        sliderInput("obs", "Number of observations:",
+                    min=0,max=1000,value=500)
+    ),
+    mainPanel(
+        h3("clientData values"),
+        varbatimTextOutput("clientdataText"),
+        plotOutput("myplot")
+    )
 ))
