@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyServer(function(input, output, session) {\n    #return the components of the URL in a string\n    output$urlText <- renderText({\n        paste(\n            sep=\"\",\n            \"protocol: \",session$clientData$url_protocol,\"\\n\",\n            \"hostname: \",session$clientData$url_hostname,\"\\n\",\n            \"pathname: \",session$clientData$url_pathname,\"\\n\",\n            \"port: \"    ,session$clientData$url_port    ,\"\\n\",\n            \"search: \"  ,session$clientData$url_search  ,\"\\n\"\n        )   \n    })\n    \n    #Parse the GET query string\n    output$queryText <- renderText({\n        query <- parseQueryString(session$clientData$url_search)\n        \n        #return a string with key-val pairs\n        paste(names(query), query, sep=\"=\", collapse=\", \")\n    })\n    \n})\n",
+    "created" : 1444892795009.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3380110475",
+    "id" : "2CDAF5D3",
+    "lastKnownWriteTime" : 1444893504,
+    "path" : "E:/code/Rcode/learnRsession/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

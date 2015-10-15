@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyUI(fluidPage(\n    h3(\"URL conponents\"),\n    verbatimTextOutput(\"urlText\"),\n    \n    h3(\"Parsed query string\"),\n    verbatimTextOutput(\"queryText\")\n))\n",
+    "created" : 1444892794702.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1973925707",
+    "id" : "AA31CA7A",
+    "lastKnownWriteTime" : 1444892960,
+    "path" : "E:/code/Rcode/learnRsession/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
