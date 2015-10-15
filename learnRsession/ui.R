@@ -15,7 +15,7 @@ shinyUI(pageWithSidebar(
     ),
     mainPanel(
         h3("clientData values"),
-        varbatimTextOutput("clientdataText"),
+        verbatimTextOutput("clientdataText"),
         plotOutput("myplot")
     )
 ))
