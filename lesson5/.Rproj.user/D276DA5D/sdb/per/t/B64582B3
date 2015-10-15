@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\nlibrary(maps)\nlibrary(mapproj)\nsource(\"helpers.R\")\n  \ncounties <- readRDS(\"data/counties.rds\")\n\nshinyServer( \n    function(input, output){\n        output$stockPrice <- renderPlot({\n            stockName = input$symb\n            tBegin=input$dates[1]\n            tEnd  =input$dates[2]\n            getSymbols(stockName,src=\"yahoo\",from=tBegin,to=tEnd,)\n        })  \n    }\n)",
+    "created" : 1444726414158.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2531197793",
+    "id" : "B64582B3",
+    "lastKnownWriteTime" : 1444727104,
+    "path" : "E:/code/Rcode/lesson6/server.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

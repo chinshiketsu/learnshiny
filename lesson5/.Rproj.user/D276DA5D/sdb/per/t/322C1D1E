@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyUI(fluidPage(\n\n  # Application title\n  titlePanel(\"stockVis\"),\n\n  # Sidebar with a slider input for number of bins\n  sidebarLayout(\n      sidebarPanel(\n          helpText(\"Select a stock to examine. Information will\n                    be collected from yahoo finance\"), \n          textInput(\"symb\", label=h3(\"Symbol\")),\n          dateRangeInput(\"dates\",label=h3(\"Date range\")),\n\n          checkboxInput(\"check1\", label=\"Plot y axis on log scale\"),\n          checkboxInput(\"check2\", label=\"Adjust prices for inflation\")\n      ),\n  \n      # Show a plot of the generated distribution\n      mainPanel( plotOutput(\"stockPrice\") )\n  )\n))\n",
+    "created" : 1444726410371.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "598688825",
+    "id" : "322C1D1E",
+    "lastKnownWriteTime" : 1444726646,
+    "path" : "E:/code/Rcode/lesson6/ui.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
